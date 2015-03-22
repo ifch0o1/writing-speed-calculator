@@ -1,3 +1,4 @@
 #Server files ignore
-server/*
+#server/*
+server/node_modules
 
