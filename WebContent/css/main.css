@@ -7,6 +7,11 @@ html {
 	color: #959595;
 	margin-left: 10px;
 }
+.disabled-anchor {
+	color: #959595;
+	cursor: default;
+	text-decoration: line-through;
+}
 
 .saving-note, .old-results-panel {
 	display: none; 

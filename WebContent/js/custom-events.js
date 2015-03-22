@@ -13,7 +13,6 @@
 		
 		timer = setTimeout(function() {
 			that.trigger('suspended:input');
-			console.log('suspended.');
 			cancelTimeout();
 		}, 3000);
 	});
