@@ -12,6 +12,10 @@ html {
 	cursor: default;
 	text-decoration: line-through;
 }
+.disabled-anchor:hover 
+{
+    text-decoration: line-through;
+}
 
 .saving-note, .old-results-panel {
 	display: none; 
