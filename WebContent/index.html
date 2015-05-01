@@ -94,11 +94,35 @@
 			<div class="footer-content col-sm-6 row">
 				<a class="disabled-anchor" href="#">My Blog</a>
 				<a href="https://github.com/ifch0o1/writing-speed-calculator">GitHub</a>
-				<a href="">Terms & conditions</a>
-				<a href="">Privacy Policy</a>
+				<a href="#" id="tos" data-toggle="modal" data-target="#myModal">Terms & conditions</a>
+				<a href="#" id="privacy-policy" data-toggle="modal" data-target="#myModal">Privacy Policy</a>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+	(function() {
+		var templates = {
+			privacyPolicy: '/templates/privacy-policy.html',
+			tos: '/templates/terms.html'
+		};
+
+		var $modal;
+		$.get('/templates/bs-modal-template.html', function(template) {
+			$modal = $(template);
+			$('body').append($modal);
+		});
+
+		$('#tos').on('click', function() {
+			$modal.find('.modal-title').text('Terms of Service');
+			$modal.find('.modal-body').load(templates.tos);
+		});
+		$('#privacy-policy').on('click', function() {
+			$modal.find('.modal-title').text('Privacy Policy');
+			$modal.find('.modal-body').load(templates.privacyPolicy);
+		});
+	}());
+	</script>
 
 	<!-- Scripts Loading -->
 	<script type="text/javascript" src="js/score-view.js"></script>
