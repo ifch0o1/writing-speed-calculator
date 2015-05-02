@@ -4,4 +4,5 @@ server/*
 node_modules/*
 #Ignore eclipse settings
 .settings/*
-
+#Ignore VS reference files
+WebContent/references
