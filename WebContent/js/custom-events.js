@@ -1,6 +1,6 @@
 (function textAreaInputSuspendedCustomEvent() {
 	var timer;
-	$('#textArea').on('keydown', function() {
+	$('#textArea').on('keyup.suspended-custom-event', function() {
 		var that = $(this);
 		
 		function cancelTimeout() {

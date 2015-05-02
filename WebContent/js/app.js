@@ -1,7 +1,7 @@
 var app = (function() {
 	var textField = $('#textArea');
 	
-	$(textField).on('keydown', function(e) {
+	$(textField).on('keyup.esc-trigger-stop', function(e) {
 		var code = e.which || e.keyCode;
 		if (code === 27) {
 			$('.m-btn-stop').trigger('click');

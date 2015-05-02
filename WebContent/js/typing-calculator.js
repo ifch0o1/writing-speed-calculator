@@ -34,7 +34,7 @@ var typingCalculator = (function () {
 
         watchingEl = el;
         $(document).ready(function () {
-            watchingEl.on('keypress', function (e) {
+            watchingEl.on('keyup.chechcar', function (e) {
                 var code = e.which || e.keyCode;
                 if ((code >= 65 && code <= 90)
                 || (code >= 97 && code <= 122)
@@ -47,7 +47,7 @@ var typingCalculator = (function () {
 
     function stopWatch() {
         if (watchingEl) {
-            watchingEl.unbind('keypress');
+            watchingEl.unbind('keyup.chechcar');
             watchingEl = undefined;
             clearScores();
         }
